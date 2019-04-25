@@ -15,9 +15,15 @@ func (self *ConstantIntegerInfo) Value() int32 {
 	return self.val
 }
 
+/*
+CONSTANT_flat_info {
+	u1 	tag
+	u4 	bytes
+}
+*/
+
 type ConstantFloatInfo struct {
-	u1 	tag;
-	u4 	bytes;
+	val float32
 }
 
 func (self *ConstantFloatInfo) readInfo(reader *ClassReader) {

@@ -16,7 +16,7 @@ func readConstantPool(reader *ClassReader) ConstantPool {
 		}
 	}
 
-	return
+	return cp
 }
 
 func (self ConstantPool) getConstantInfo(index uint16) ConstantInfo {

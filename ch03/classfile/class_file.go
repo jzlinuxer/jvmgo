@@ -57,7 +57,7 @@ func (self *ClassFile) read(read  *ClassReader) {
 	self.readAndCheckMagic(read)
 }
 
-func (self *ClassFile) readAndCheckMagic(read  *ClassReader) {
+func (self *ClassFile) readAndCheckMagic(reader  *ClassReader) {
 	magic := reader.readUint32()
 	if magic != 0xCAFEBABE {
 		panic("java.lang.ClassFormatError: magic!")
