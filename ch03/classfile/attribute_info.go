@@ -4,7 +4,6 @@ type AttributeInfo interface {
 	readInfo(reader *ClassReader)
 }
 
-/*
 func readAttributes(reader *ClassReader, cp ConstantPool) []AttributeInfo {
 	attributesCount := reader.readUint16()
 	attributes := make([]AttributeInfo, attributesCount)
@@ -27,24 +26,22 @@ func readAttribute(reader *ClassReader, cp ConstantPool) AttributeInfo {
 func newAttributeInfo(attrName string, attrLen uint32, cp ConstantPool) AttributeInfo {
 	switch attrName {
 		case "code":
-		return
-		case "ConstantVale":
-		return
+		return &CodeAttribute{cp: cp}
+		case "ConstantValue":
+		return &ConstantValueAttribute{}
 		case "Deprecated":
-		return
+		return &DeprecatedAttribute{}
 		case "Exceptions":
-		return
+		return &ExceptionsAttribute{}
 		case "LineNumbrTable":
-		return
+		return &LineNumberTableAttribute{}
 		case "LocalVariableTable":
-		return
+		return &LocalVariableTableAttribute{}
 		case "SourceFile":
-		return
+		return &SourceFileAttribute{cp: cp}
 		case "Synthetic":
-		return
-		//default:
-			//return &UnparsedAttribute{attrName, attrLen, nil}
+		return &SyntheticAttribute{}
+		default:
+			return &UnparsedAttribute{attrName, attrLen, nil}
 	}
 }
-
-*/

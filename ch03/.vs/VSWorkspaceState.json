@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\classfile"
+    "\\classfile",
+    "\\classpath"
   ],
-  "SelectedNode": "\\classfile\\cp_member_ref.go",
+  "SelectedNode": "\\main.go",
   "PreviewInSolutionExplorer": false
 }
