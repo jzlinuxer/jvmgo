@@ -8,7 +8,7 @@ type DREM struct {
 	base.NoOperandsInstruction
 }
 
-func (self *DREM) Execute(frame rtda.Frame)  {
+func (self *DREM) Execute(frame *rtda.Frame)  {
 	stack := frame.OperandStack()
 	v2 := stack.PopDouble()
 	v1 := stack.PopDouble()

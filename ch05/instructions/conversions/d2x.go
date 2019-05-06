@@ -7,7 +7,7 @@ type D2F struct {
 	base.NoOperandsInstruction
 }
 
-func (self *D2F) Exceute(frame *rtda.Frame)  {
+func (self *D2F) Execute(frame *rtda.Frame)  {
 	stack := frame.OperandStack()
 	d := stack.PopDouble()
 	f := float32(d)
